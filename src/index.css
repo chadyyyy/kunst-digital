@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   KUNST.Digital - Global Styles
+   ======================================== */
+
+:root {
+  /* Design Tokens */
+  --midnight: #1E1E1E;
+  --midnight-light: #252525;
+  --midnight-lighter: #2D2D2D;
+  --orange: #E84B1E;
+  --white: #FFFFFF;
+
+  /* Spacing */
+  --section-padding: clamp(4rem, 10vw, 8rem);
+
+  /* Transitions */
+  --transition-smooth: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) var(--midnight);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--midnight);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--midnight);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5a1f;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+
+.font-heading {
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+/* ========================================
+   Animated Grid Background
+   ======================================== */
+
+.bg-grid-animated {
+  position: relative;
+}
+
+.bg-grid-animated::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(232, 75, 30, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 75, 30, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* ========================================
+   Glassmorphism Utilities
+   ======================================== */
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-dark {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-orange {
+  background: rgba(217, 72, 15, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(217, 72, 15, 0.2);
+}
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+.btn-primary {
+  @apply relative overflow-hidden px-8 py-4 bg-orange text-white font-outfit font-semibold uppercase tracking-wider;
+  @apply transition-all duration-500 ease-out-expo;
+}
+
+.btn-primary::before {
+  content: '';
+  @apply absolute inset-0 bg-white/20 -translate-x-full skew-x-12;
+  @apply transition-transform duration-500 ease-out-expo;
+}
+
+.btn-primary:hover::before {
+  @apply translate-x-full;
+}
+
+.btn-primary:hover {
+  @apply shadow-lg shadow-orange/30 -translate-y-0.5;
+}
+
+.btn-outline {
+  @apply relative px-8 py-4 border border-white/30 text-white font-outfit font-medium uppercase tracking-wider;
+  @apply transition-all duration-300;
+}
+
+.btn-outline:hover {
+  @apply border-orange text-orange;
+}
+
+/* ========================================
+   Card Styles
+   ======================================== */
+
+.card-3d {
+  @apply relative overflow-hidden rounded-2xl p-8;
+  @apply bg-gradient-to-br from-midnight-lighter to-midnight;
+  @apply border border-white/5;
+  @apply transition-all duration-500 ease-out-expo;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-3d:hover {
+  @apply border-orange/30 shadow-2xl shadow-orange/10;
+  transform: rotateY(-5deg) rotateX(5deg) translateZ(20px);
+}
+
+.card-3d::before {
+  content: '';
+  @apply absolute inset-0 opacity-0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(232, 75, 30, 0.15), transparent 50%);
+  @apply transition-opacity duration-300;
+}
+
+.card-3d:hover::before {
+  @apply opacity-100;
+}
+
+/* ========================================
+   Text Reveal Animation
+   ======================================== */
+
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: text-reveal 0.8s var(--transition-smooth) forwards;
+}
+
+@keyframes text-reveal {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   Split Text Animation
+   ======================================== */
+
+.split-text .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px) rotateX(-90deg);
+}
+
+.split-text.animate .letter {
+  animation: letter-appear 0.5s var(--transition-smooth) forwards;
+}
+
+/* ========================================
+   Section Styling
+   ======================================== */
+
+section {
+  @apply relative;
+  padding: var(--section-padding) 0;
+}
+
+.section-title {
+  @apply font-syncopate text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider mb-4;
+}
+
+.section-subtitle {
+  @apply font-inter text-lg md:text-xl text-white/60 max-w-2xl;
+}
+
+/* ========================================
+   Marquee Animation
+   ======================================== */
+
+.marquee-container {
+  @apply overflow-hidden whitespace-nowrap flex;
+}
+
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 80s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   Form Styles
+   ======================================== */
+
+.form-input {
+  @apply w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3;
+  @apply text-white placeholder-white/40;
+  @apply transition-all duration-300;
+  @apply focus:outline-none focus:border-orange focus:bg-white/10;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 3px rgba(217, 72, 15, 0.1);
+}
+
+.form-label {
+  @apply block text-sm font-medium text-white/60 mb-2 uppercase tracking-wider;
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .section-title {
+    @apply text-3xl;
+  }
+
+  :root {
+    --section-padding: 4rem;
+  }
+}
+
+/* ========================================
+   Page Transitions
+   ======================================== */
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s var(--transition-smooth);
+}
+
+/* ========================================
+   WhatsApp Button
+   ======================================== */
+
+.whatsapp-btn {
+  @apply fixed bottom-6 right-6 z-50;
+  @apply w-14 h-14 rounded-full;
+  @apply bg-[#25D366] text-white;
+  @apply flex items-center justify-center;
+  @apply shadow-lg shadow-[#25D366]/30;
+  @apply transition-all duration-300;
+  @apply hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40;
+}
+
+/* ========================================
+   Noise Texture Overlay
+   ======================================== */
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+/* Prevent body scroll when modal is open */
+body.overflow-hidden {
+  overflow: hidden;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project_architecture>
+  <metadata>
+    <project_name>KUNST.Digital Website</project_name>
+    <framework>React 18 (Vite)</framework>
+    <styling>Tailwind CSS</styling>
+    <animation_library>Framer Motion</animation_library>
+    <language>JavaScript (JSX)</language>
+  </metadata>
+
+  <design_system>
+    <colors>
+      <color name="midnight" hex="#050505" usage="Primary Background" />
+      <color name="midnight-light" hex="#0a0a0a" usage="Secondary Background Patterning" />
+      <color name="orange" hex="#D9480F" usage="Primary Accent &amp; CTA" />
+      <color name="white" hex="#FFFFFF" usage="Primary Text" />
+    </colors>
+    <typography>
+      <font family="Syncopate" usage="Main Headings, Bold Uppercase Text" />
+      <font family="Outfit" usage="Subheadings, Buttons, Tracking elements" />
+      <font family="Inter" usage="Body Text, Descriptions" />
+    </typography>
+  </design_system>
+
+  <directory_structure>
+    <directory path="src/">
+      <file name="App.jsx" type="component" description="Main orchestrator holding AnimatePresence and stacking all page sections." />
+      <file name="index.css" type="stylesheet" description="Global styles, custom keyframes, font imports, and base Tailwind directives." />
+      <file name="main.jsx" type="entry" description="React DOM rendering entry point." />
+      
+      <directory path="components/">
+        <file name="About.jsx" description="Introduction to the agency DNA. Features text reveals and parallax effects." />
+        <file name="Clients.jsx" description="Displays client logos in two infinite, GPU-accelerated CSS marquees (national and international) moving in opposite directions." />
+        <file name="Contact.jsx" description="Contact section split into agency details and a contact form with a modern layout." />
+        <file name="Expertise.jsx" description="Grid of 3D tilt cards detailing high-level expertise areas (Strategy, Digital Design, Events/Scenography)." />
+        <file name="Footer.jsx" description="Modern footer with navigation links, branding, and copyright." />
+        <file name="Header.jsx" description="Fixed top navigation bar with a glassmorphism backdrop and CTA button." />
+        <file name="Hero.jsx" description="Full-screen auto-playing slider showcasing core business vertices with a Ken Burns background effect and thumbnail navigation." />
+        <file name="Portfolio.jsx" description="Masonry layout grid displaying previous agency projects with hover interactions." />
+        <file name="Process.jsx" description="Visual storytelling workflow explaining the agency's methodology and operational steps." />
+        <file name="Services.jsx" description="Bento-box grid detailing granular services offered by the agency." />
+      </directory>
+
+      <directory path="hooks/">
+        <file name="useScrollReveal.jsx" description="Custom React hook utilizing IntersectionObserver to trigger animations when elements become visible in the viewport." />
+      </directory>
+    </directory>
+    
+    <directory path="public/">
+      <directory path="images/" description="Stores static assets like hero slider images, stands photography, and noise textures." />
+    </directory>
+  </directory_structure>
+</project_architecture>
