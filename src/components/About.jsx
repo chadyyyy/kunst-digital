@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
-import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion'
+import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const Counter = ({ value, duration = 2 }) => {

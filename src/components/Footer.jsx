@@ -5,15 +5,15 @@ import { navLinks, socialLinks } from '../data/navigation'
 import { ArrowRight } from 'lucide-react'
 
 const Footer = ({ onOpenPresentation }) => {
-  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 })
+    const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 })
 
-  const currentYear = new Date().getFullYear()
-  
-  // Add Clients link for footer
-  const footerNavLinks = [
-    ...navLinks,
-    { name: 'Clients', href: '#clients' },
-  ]
+    const currentYear = new Date().getFullYear()
+
+    // Add Clients link for footer
+    const footerNavLinks = [
+        ...navLinks,
+        { name: 'Clients', href: '#clients' },
+    ]
 
     return (
         <footer
@@ -105,8 +105,8 @@ const Footer = ({ onOpenPresentation }) => {
                                 transition={{ delay: 0.3, duration: 0.6 }}
                             >
                                 <p className="text-sm font-mono text-white/40 mb-1">EMAIL</p>
-                                <a href="mailto:contact@kunstcom.ma" className="text-white hover:text-orange transition-colors">
-                                    contact@kunstcom.ma
+                                <a href="mailto:kunstcom.m@gmail.com" className="text-white hover:text-orange transition-colors">
+                                    kunstcom.m@gmail.com
                                 </a>
                             </motion.div>
                             <motion.div

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import OptimizedImage from './OptimizedImage'
 
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -141,8 +142,8 @@ const Hero = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-midnight/90 via-midnight/50 to-transparent"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-transparent to-midnight/30"></div>
 
-                    {/* Subtle grain texture */}
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+{/* Subtle grain texture */}
+        <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
                 </motion.div>
             </AnimatePresence>
 

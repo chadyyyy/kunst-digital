@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Download, ExternalLink, ChevronRight, ChevronLeft, Maximize } from 'lucide-react'
+import { ArrowLeft, Download, ChevronRight, ChevronLeft } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { Document, Page, pdfjs } from 'react-pdf'
 import HTMLFlipBook from 'react-pageflip'
@@ -109,9 +109,9 @@ const PresentationPage = () => {
                             <h1 className="text-4xl md:text-5xl lg:text-5xl font-syncopate font-bold uppercase tracking-tighter leading-[1.1] mb-6">
                                 Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange to-red-600">Identité</span>
                             </h1>
-                            <p className="text-white/60 font-inter text-base md:text-lg leading-relaxed mb-6">
-                                Plongez au cœur de KUNST.Digital. Découvrez notre manifeste, la profondeur de nos champs d'expertise, et la philosophie qui anime chacune de nos réalisations dans notre présentation officielle.
-                            </p>
+<p className="text-white/60 font-inter text-base md:text-lg leading-relaxed mb-6">
+          Plongez au cœur de KUNST.Digital. Découvrez notre manifeste, la profondeur de nos champs d&apos;expertise, et la philosophie qui anime chacune de nos réalisations dans notre présentation officielle.
+        </p>
                         </motion.div>
                     </div>
 

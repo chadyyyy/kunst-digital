@@ -31,7 +31,7 @@ export const contactInfo = {
     postalCode: '20000',
     country: 'Maroc'
   },
-  email: 'contact@kunstcom.ma',
+  email: 'kunstcom.m@gmail.com',
   phone: '+212 5 22 43 43 43',
   phoneDisplay: '+212 5 22 43 43 43'
 }
