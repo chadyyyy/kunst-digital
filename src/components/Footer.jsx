@@ -36,7 +36,7 @@ const Footer = ({ onOpenPresentation }) => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <img
-                                    src="/images/logo.png"
+                                    src="/images/logo.webp"
                                     alt="KUNST Logo"
                                     className="h-16 w-auto object-contain"
                                 />

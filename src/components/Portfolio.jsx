@@ -27,8 +27,8 @@ const Portfolio = () => {
             category: "Exhibition",
             year: "2024",
             description: "Conception et réalisation intégrale du stand EDF. Une approche architecturale mettant en lumière l'innovation énergétique.",
-            cover: "/images/portfolio/EDF/image-1.jpeg",
-            images: Array.from({ length: 7 }, (_, i) => `/images/portfolio/EDF/image-${i + 1}.jpeg`)
+            cover: "/images/portfolio/EDF/image-1.webp",
+            images: Array.from({ length: 7 }, (_, i) => `/images/portfolio/EDF/image-${i + 1}.webp`)
         },
         {
             id: 'sanipak',
@@ -36,8 +36,8 @@ const Portfolio = () => {
             category: "Event & Branding",
             year: "2023",
             description: "Activation de marque et design d'espace pour Sanipak. Création d'un univers immersif pour les visiteurs.",
-            cover: "/images/portfolio/Sanipak/image-1.jpeg",
-            images: Array.from({ length: 4 }, (_, i) => `/images/portfolio/Sanipak/image-${i + 1}.jpeg`)
+            cover: "/images/portfolio/Sanipak/image-1.webp",
+            images: Array.from({ length: 4 }, (_, i) => `/images/portfolio/Sanipak/image-${i + 1}.webp`)
         }
     ]
 

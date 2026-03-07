@@ -25,7 +25,7 @@ const Expertise = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
         </svg>
       ),
-      image: '/images/expertise-1.png',
+      image: '/images/expertise-1.webp',
       services: [
         'Conception graphique',
         'Charte branding',
@@ -44,7 +44,7 @@ const Expertise = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z" />
         </svg>
       ),
-      image: '/images/expertise-2.png',
+      image: '/images/expertise-2.webp',
       services: [
         'Capital Image',
         'Stratégie 360°',
@@ -64,7 +64,7 @@ const Expertise = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
         </svg>
       ),
-      image: '/images/expertise-3.png',
+      image: '/images/expertise-3.webp',
       services: [
         'Sites Web Immérsifs',
         'Social Media',

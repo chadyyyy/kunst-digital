@@ -78,7 +78,7 @@ const PresentationPage = () => {
             <header className="py-6 px-6 md:px-12 flex justify-between items-center relative z-10 border-b border-white/5">
                 <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="flex items-center">
                     <img
-                        src="/images/logo.png"
+                        src="/images/logo.webp"
                         alt="KUNST.Digital"
                         className="h-10 md:h-14 w-auto object-contain"
                     />

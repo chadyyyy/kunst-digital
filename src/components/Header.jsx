@@ -46,7 +46,7 @@ const Header = ({ onOpenPresentation }) => {
                         transition={{ duration: 0.4 }}
                     >
                         <img
-                            src="/images/logo.png"
+                            src="/images/logo.webp"
                             alt="KUNST.Digital"
                             className="h-14 md:h-24 w-auto object-contain"
                         />

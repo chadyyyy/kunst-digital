@@ -10,7 +10,7 @@ const getSafeFilename = (name) => {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]/g, '-')
     .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '') + '.png';
+    .replace(/^-|-$/g, '') + '.webp';
 }
 
 // Logo component with React-based fallback (no XSS vulnerability)
@@ -66,16 +66,16 @@ const Clients = () => {
   const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1 })
 
   const nationalClients1 = [
-    { name: "Schneider Electric", domain: "se.com", logoFile: "Schneider.png" },
-    { name: "Bureau Veritas", domain: "bureauveritas.com", logoFile: "bureau-veritas.png" },
-    { name: "SOGEA Maroc", domain: "sogea-maroc.com", logoFile: "sogea-maroc.png" },
-    { name: "Cámara Española de Comercio", domain: "camacoescasablanca.com", logoFile: "camara-espanola-de-comercio.png" },
+    { name: "Schneider Electric", domain: "se.com", logoFile: "Schneider.webp" },
+    { name: "Bureau Veritas", domain: "bureauveritas.com", logoFile: "bureau-veritas.webp" },
+    { name: "SOGEA Maroc", domain: "sogea-maroc.com", logoFile: "sogea-maroc.webp" },
+    { name: "Cámara Española de Comercio", domain: "camacoescasablanca.com", logoFile: "camara-espanola-de-comercio.webp" },
     { name: "Forever Living Products", domain: "foreverliving.com", logoFile: "forever-living-products.svg" },
-    { name: "Wilo", domain: "wilo.com", logoFile: "wilo.png" },
-    { name: "Totalcall", domain: "total-call.ma", logoFile: "totalcall.png" },
+    { name: "Wilo", domain: "wilo.com", logoFile: "wilo.webp" },
+    { name: "Totalcall", domain: "total-call.ma", logoFile: "totalcall.webp" },
     { name: "CHU Tanger", domain: "sante.gov.ma", logoFile: 'chutanger.png' },
-    { name: "Dachser Intelligent Logistics", domain: "dachser.com", logoFile: "Dachser-logo.png" },
-    { name: "Jossour Ingénierie", domain: "jossourgroup.com", logoFile: "Jossour-Group.png" },
+    { name: "Dachser Intelligent Logistics", domain: "dachser.com", logoFile: "Dachser-logo.webp" },
+    { name: "Jossour Ingénierie", domain: "jossourgroup.com", logoFile: "Jossour-Group.webp" },
     { name: "CLEDOR", domain: "cledor.ma", logoFile: 'cledor.png' },
     { name: "Famasser", domain: "famasser.ma", logoFile: 'famasser.png' },
     { name: "C.T.P.C", domain: "ctpc.ma", logoFile: 'ctpc.ma.png' },

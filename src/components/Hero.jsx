@@ -1,41 +1,40 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import OptimizedImage from './OptimizedImage'
 
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [isAutoPlaying, setIsAutoPlaying] = useState(true)
     const [imagesPreloaded, setImagesPreloaded] = useState(false)
 
-    const slides = [
-        {
-            id: 1,
-            title: "ÉVÉNEMENTIEL",
-            subtitle: "SCÉNOGRAPHIE & EXPÉRIENCE",
-            description: "Au-delà de l'organisation, nous créons des univers immersifs qui marquent durablement vos visiteurs. Une vision 360° pour vos événements d'exception.",
-            image: "/images/hero-evenementiel-final.png",
-            accent: "Événementiel",
-            type: "agency"
-        },
-        {
-            id: 2,
-            title: "IMPRESSION",
-            subtitle: "SUPPORTS & GRANDS FORMATS",
-            description: "Des solutions d'impression haute définition pour tous vos besoins de communication. Précision, couleurs éclatantes et finitions haute couture.",
-            image: "/images/hero-impression-pro.png",
-            accent: "Impression",
-            type: "service"
-        },
-        {
-            id: 3,
-            title: "CONCEPTION STANDS",
-            subtitle: "ARCHITECTURE ÉPHÉMÈRE",
-            description: "Donnez vie à vos espaces d'exposition avec des designs 3D innovants. Nous allions architecture moderne et efficacité commerciale commerciale.",
-            image: "/images/hero-stands-edf-pro.png",
-            accent: "Stands",
-            type: "service"
-        }
-    ]
+const slides = [
+  {
+    id: 1,
+    title: "ÉVÉNEMENTIEL",
+    subtitle: "SCÉNOGRAPHIE & EXPÉRIENCE",
+    description: "Au-delà de l'organisation, nous créons des univers immersifs qui marquent durablement vos visiteurs. Une vision 360° pour vos événements d'exception.",
+    image: "/images/hero-evenementiel-final.webp",
+    accent: "Événementiel",
+    type: "agency"
+  },
+  {
+    id: 2,
+    title: "IMPRESSION",
+    subtitle: "SUPPORTS & GRANDS FORMATS",
+    description: "Des solutions d'impression haute définition pour tous vos besoins de communication. Précision, couleurs éclatantes et finitions haute couture.",
+    image: "/images/hero-impression-pro.webp",
+    accent: "Impression",
+    type: "service"
+  },
+  {
+    id: 3,
+    title: "CONCEPTION STANDS",
+    subtitle: "ARCHITECTURE ÉPHÉMÈRE",
+    description: "Donnez vie à vos espaces d'exposition avec des designs 3D innovants. Nous allions architecture moderne et efficacité commerciale commerciale.",
+    image: "/images/hero-stands-edf-pro.webp",
+    accent: "Stands",
+    type: "service"
+  }
+]
 
     const nextSlide = useCallback(() => {
         setCurrentSlide((prev) => (prev + 1) % slides.length)
