@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 // Components
 import Header from './components/Header'
@@ -109,15 +110,18 @@ function App() {
     }
 
     return (
-        <AnimatePresence mode="wait">
-            <Routes>
-                <Route path="/" element={<Home pageVariants={pageVariants} />} />
-                <Route path="/presentation" element={<PresentationPage />} />
-                <Route path="/pr%C3%A9sentation" element={<Navigate to="/presentation" replace />} />
-                <Route path="/présentation" element={<Navigate to="/presentation" replace />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-        </AnimatePresence>
+        <>
+            <AnimatePresence mode="wait">
+                <Routes>
+                    <Route path="/" element={<Home pageVariants={pageVariants} />} />
+                    <Route path="/presentation" element={<PresentationPage />} />
+                    <Route path="/pr%C3%A9sentation" element={<Navigate to="/presentation" replace />} />
+                    <Route path="/présentation" element={<Navigate to="/presentation" replace />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
+                </Routes>
+            </AnimatePresence>
+            <SpeedInsights />
+        </>
     )
 }
 
